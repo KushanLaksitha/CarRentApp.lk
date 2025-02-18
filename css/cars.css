@@ -1,0 +1,61 @@
+:root {
+    --primary-bg: #f0f2f5;
+    --sidebar-bg: #2C3E50;
+}
+
+body {
+    background-color: var(--primary-bg);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.sidebar {
+    background: var(--sidebar-bg);
+    min-height: 100vh;
+    color: white;
+    padding-top: 2rem;
+}
+
+.sidebar .nav-link {
+    color: rgba(255, 255, 255, 0.8);
+    padding: 0.8rem 1rem;
+    margin: 0.2rem 0;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.sidebar .nav-link:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+.sidebar .nav-link.active {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.car-card {
+    background: white;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+    margin-bottom: 1rem;
+}
+
+.car-card:hover {
+    transform: translateY(-5px);
+}
+
+.status-badge {
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+.status-badge.available {
+    background-color: #d1fae5;
+    color: #065f46;
+}
+
+.status-badge.unavailable {
+    background-color: #fee2e2;
+    color: #991b1b;
+}

@@ -1,6 +1,6 @@
 <?php
 // Database connection
-require 'databaseConnection.php';
+require '../includes/databaseConnection.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Sanitize and validate input

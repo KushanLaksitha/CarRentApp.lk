@@ -2,7 +2,7 @@ document.getElementById("checkAvailabilityBtn").addEventListener("click", functi
     const form = document.getElementById("checkAvailabilityForm");
     const formData = new FormData(form);
 
-    fetch("check_availability.php", {
+    fetch("../includes/check_availability.php", {
         method: "POST",
         body: formData,
     })

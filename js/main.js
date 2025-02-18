@@ -150,7 +150,7 @@ document.addEventListener('DOMContentLoaded', function() {
         formData.append('car_select', selectedCar);
         
         // Send AJAX request to PHP
-        fetch('search_results.php', {
+        fetch('../includes/search_results.php', {
             method: 'POST',
             body: formData
         })

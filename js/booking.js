@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Form submission via AJAX
         const formData = new FormData(bookingForm);
 
-        fetch('submit_booking.php', {
+        fetch('../auth/submit_booking.php', {
             method: 'POST',
             body: formData
         })

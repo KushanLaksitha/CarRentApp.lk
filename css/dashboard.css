@@ -1,0 +1,124 @@
+:root {
+    --primary-bg: #f0f2f5;
+    --card-bg-1: linear-gradient(45deg, #FF6B6B, #FF8E53);
+    --card-bg-2: linear-gradient(45deg, #4E65FF, #92EFFD);
+    --card-bg-3: linear-gradient(45deg, #45B649, #96E6A1);
+    --sidebar-bg: #2C3E50;
+}
+
+body {
+    background-color: var(--primary-bg);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.sidebar {
+    background: var(--sidebar-bg);
+    min-height: 100vh;
+    color: white;
+    padding-top: 2rem;
+}
+
+.sidebar .nav-link {
+    color: rgba(255, 255, 255, 0.8);
+    padding: 0.8rem 1rem;
+    margin: 0.2rem 0;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.sidebar .nav-link:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+.sidebar .nav-link.active {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.stat-card {
+    border-radius: 15px;
+    padding: 1.5rem;
+    color: white;
+    transition: transform 0.3s ease;
+    min-height: 140px;
+    position: relative;
+    overflow: hidden;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+}
+
+.stat-card::after {
+    content: '';
+    position: absolute;
+    right: -15px;
+    bottom: -15px;
+    width: 100px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+}
+
+.stat-card.bookings {
+    background: var(--card-bg-1);
+}
+
+.stat-card.cars {
+    background: var(--card-bg-2);
+}
+
+.stat-card.subscribers {
+    background: var(--card-bg-3);
+}
+
+.recent-bookings {
+    background: white;
+    border-radius: 15px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+}
+
+.welcome-banner {
+    background: linear-gradient(45deg, #3494E6, #EC6EAD);
+    border-radius: 15px;
+    padding: 2rem;
+    color: white;
+    margin-bottom: 2rem;
+}
+
+.booking-item {
+    border-left: 4px solid #3494E6;
+    padding: 1rem;
+    margin: 0.5rem 0;
+    background: #f8f9fa;
+    border-radius: 0 8px 8px 0;
+    transition: all 0.3s ease;
+}
+
+.booking-item:hover {
+    transform: translateX(5px);
+    background: #f0f2f5;
+}
+
+.navbar {
+    background: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.profile-menu {
+    background: white;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.profile-menu:hover {
+    background: #f0f2f5;
+}
