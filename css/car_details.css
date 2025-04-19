@@ -1,0 +1,121 @@
+:root {
+    --primary-color: #4e73df;
+    --secondary-color: #224abe;
+    --dark-color: #3a3b45;
+    --light-color: #f8f9fc;
+}
+
+body {
+    font-family: 'Nunito', 'Segoe UI', sans-serif;
+    background-color: var(--light-color);
+}
+
+.sidebar {
+    min-height: 100vh;
+    background-color: var(--primary-color);
+    color: white;
+    transition: all 0.3s;
+}
+
+.sidebar .nav-link {
+    color: rgba(255, 255, 255, 0.8);
+    padding: 10px 20px;
+    transition: all 0.3s;
+}
+
+.sidebar .nav-link:hover {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.sidebar .nav-link.active {
+    color: white;
+    background-color: var(--secondary-color);
+}
+
+.main-content {
+    padding: 30px;
+}
+
+.navbar {
+    background-color: white;
+    box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
+}
+
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
+    margin-bottom: 20px;
+}
+
+.car-image {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.feature-icon {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.price-badge {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.rating-stars i {
+    color: #ffc107;
+}
+
+.review-card {
+    border-bottom: 1px solid #eee;
+    padding: 15px 0;
+}
+
+.review-card:last-child {
+    border-bottom: none;
+}
+
+.booking-form {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.company-logo {
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+.car-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.feature-box {
+    text-align: center;
+    flex: 1;
+    min-width: 100px;
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0.1rem 0.5rem rgba(0, 0, 0, 0.05);
+}
+
+/* Calendar styling */
+.flatpickr-day.flatpickr-disabled, 
+.flatpickr-day.flatpickr-disabled:hover {
+    background-color: #ffcccc !important;
+    color: #999 !important;
+    text-decoration: line-through;
+}

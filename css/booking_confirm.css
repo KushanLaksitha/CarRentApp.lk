@@ -1,0 +1,165 @@
+:root {
+    --primary-color: #4e73df;
+    --secondary-color: #224abe;
+    --dark-color: #3a3b45;
+    --light-color: #f8f9fc;
+}
+
+body {
+    font-family: 'Nunito', 'Segoe UI', sans-serif;
+    background-color: var(--light-color);
+}
+
+.sidebar {
+    min-height: 100vh;
+    background-color: var(--primary-color);
+    color: white;
+    transition: all 0.3s;
+}
+
+.sidebar .nav-link {
+    color: rgba(255, 255, 255, 0.8);
+    padding: 10px 20px;
+    transition: all 0.3s;
+}
+
+.sidebar .nav-link:hover {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.sidebar .nav-link.active {
+    color: white;
+    background-color: var(--secondary-color);
+}
+
+.main-content {
+    padding: 30px;
+}
+
+.navbar {
+    background-color: white;
+    box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
+}
+
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
+    margin-bottom: 20px;
+}
+
+.car-image {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+.booking-header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 20px;
+    border-radius: 10px 10px 0 0;
+}
+
+.booking-status {
+    font-size: 0.9rem;
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+
+.status-pending {
+    background-color: #f6c23e;
+    color: #856404;
+}
+
+.status-confirmed {
+    background-color: #1cc88a;
+    color: #155724;
+}
+
+.status-cancelled {
+    background-color: #e74a3b;
+    color: #721c24;
+}
+
+.status-completed {
+    background-color: #4e73df;
+    color: #004085;
+}
+
+.payment-status-pending {
+    background-color: #f6c23e;
+    color: #856404;
+}
+
+.payment-status-partial {
+    background-color: #36b9cc;
+    color: #0c5460;
+}
+
+.payment-status-paid {
+    background-color: #1cc88a;
+    color: #155724;
+}
+
+.booking-detail {
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.booking-detail:last-child {
+    border-bottom: none;
+}
+
+.payment-methods .form-check {
+    padding: 10px;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.payment-methods .form-check:hover {
+    border-color: var(--primary-color);
+    background-color: rgba(78, 115, 223, 0.05);
+}
+
+.payment-methods .form-check-input:checked + .form-check-label {
+    font-weight: bold;
+}
+
+.company-logo {
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+.print-btn {
+    color: var(--primary-color);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.print-btn:hover {
+    color: var(--secondary-color);
+}
+
+@media print {
+    .sidebar, .navbar, .no-print {
+        display: none !important;
+    }
+    
+    .main-content {
+        padding: 0;
+        margin: 0;
+        width: 100% !important;
+    }
+    
+    .col-lg-10 {
+        width: 100% !important;
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+    }
+}

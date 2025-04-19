@@ -49,44 +49,31 @@ body {
     margin-bottom: 20px;
 }
 
-.card-header {
-    background-color: transparent;
-    border-bottom: 1px solid #e3e6f0;
-    font-weight: 600;
-    color: var(--primary-color);
-}
-
-.stats-card {
-    border-left: 4px solid;
-    padding: 15px;
-}
-
-.stats-card.primary {
-    border-left-color: var(--primary-color);
-}
-
-.stats-card.success {
-    border-left-color: #1cc88a;
-}
-
-.stats-card.info {
-    border-left-color: #36b9cc;
-}
-
-.stats-card.warning {
-    border-left-color: #f6c23e;
-}
-
-.table th {
-    background-color: var(--light-color);
-}
-
-.badge {
-    padding: 6px 12px;
-    border-radius: 20px;
-}
-
 .company-logo {
     height: 40px;
     margin-bottom: 10px;
+}
+
+.car-image {
+    width: 100%;
+    border-radius: 10px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.rating-container input[type="radio"] {
+    display: none;
+}
+
+.rating-container label {
+    font-size: 1.8rem;
+    color: #ccc;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.rating-container label:hover,
+.rating-container label:hover ~ label,
+.rating-container input[type="radio"]:checked ~ label {
+    color: #ffc107;
 }

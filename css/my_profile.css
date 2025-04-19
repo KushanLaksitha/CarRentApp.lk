@@ -56,34 +56,41 @@ body {
     color: var(--primary-color);
 }
 
-.stats-card {
-    border-left: 4px solid;
+.stats-box {
+    text-align: center;
     padding: 15px;
+    border-radius: 10px;
+    background-color: #fff;
+    margin-bottom: 20px;
 }
 
-.stats-card.primary {
-    border-left-color: var(--primary-color);
+.stats-icon {
+    font-size: 2rem;
+    margin-bottom: 10px;
 }
 
-.stats-card.success {
-    border-left-color: #1cc88a;
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #fff;
+    box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
 }
 
-.stats-card.info {
-    border-left-color: #36b9cc;
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(78, 115, 223, 0.25);
 }
 
-.stats-card.warning {
-    border-left-color: #f6c23e;
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
 }
 
-.table th {
-    background-color: var(--light-color);
-}
-
-.badge {
-    padding: 6px 12px;
-    border-radius: 20px;
+.btn-primary:hover {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
 }
 
 .company-logo {

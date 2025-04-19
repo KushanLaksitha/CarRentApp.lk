@@ -47,43 +47,41 @@ body {
     border-radius: 10px;
     box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
     margin-bottom: 20px;
+    transition: transform 0.3s;
 }
 
-.card-header {
-    background-color: transparent;
-    border-bottom: 1px solid #e3e6f0;
-    font-weight: 600;
-    color: var(--primary-color);
+.card:hover {
+    transform: translateY(-5px);
 }
 
-.stats-card {
-    border-left: 4px solid;
-    padding: 15px;
+.car-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
 }
 
-.stats-card.primary {
-    border-left-color: var(--primary-color);
+.category-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 0.8rem;
 }
 
-.stats-card.success {
-    border-left-color: #1cc88a;
+.filter-section {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
+    margin-bottom: 20px;
 }
 
-.stats-card.info {
-    border-left-color: #36b9cc;
-}
-
-.stats-card.warning {
-    border-left-color: #f6c23e;
-}
-
-.table th {
-    background-color: var(--light-color);
-}
-
-.badge {
-    padding: 6px 12px;
+.price-badge {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 5px 10px;
     border-radius: 20px;
+    font-weight: bold;
 }
 
 .company-logo {

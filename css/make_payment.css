@@ -49,44 +49,37 @@ body {
     margin-bottom: 20px;
 }
 
-.card-header {
-    background-color: transparent;
-    border-bottom: 1px solid #e3e6f0;
-    font-weight: 600;
-    color: var(--primary-color);
-}
-
-.stats-card {
-    border-left: 4px solid;
-    padding: 15px;
-}
-
-.stats-card.primary {
-    border-left-color: var(--primary-color);
-}
-
-.stats-card.success {
-    border-left-color: #1cc88a;
-}
-
-.stats-card.info {
-    border-left-color: #36b9cc;
-}
-
-.stats-card.warning {
-    border-left-color: #f6c23e;
-}
-
-.table th {
-    background-color: var(--light-color);
-}
-
-.badge {
-    padding: 6px 12px;
-    border-radius: 20px;
+.car-image {
+    width: 100%;
+    border-radius: 10px;
+    height: 300px;
+    object-fit: cover;
 }
 
 .company-logo {
     height: 40px;
     margin-bottom: 10px;
+}
+
+.payment-options .form-check {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    transition: all 0.3s;
+}
+
+.payment-options .form-check:hover {
+    border-color: var(--primary-color);
+}
+
+.payment-options .form-check-input:checked ~ .payment-label {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.payment-summary {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    padding: 20px;
 }

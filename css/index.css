@@ -1,0 +1,153 @@
+:root {
+    --primary-color: #4e73df;
+    --secondary-color: #224abe;
+    --dark-color: #3a3b45;
+    --light-color: #f8f9fc;
+}
+
+body {
+    font-family: 'Nunito', 'Segoe UI', sans-serif;
+    background: linear-gradient(to right, rgba(78, 115, 223, 0.8), rgba(34, 74, 190, 0.9)), url('assets/images/car-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-container {
+    width: 400px;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.login-header {
+    background-color: var(--primary-color);
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+.login-header h1 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+.login-body {
+    padding: 30px;
+}
+
+.form-control {
+    border-radius: 10px;
+    padding: 12px;
+    border: 1px solid #d1d3e2;
+}
+
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem rgba(78, 115, 223, 0.25);
+}
+
+.form-group {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.form-group i {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    color: #858796;
+}
+
+.form-group input {
+    padding-left: 45px;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    border-radius: 10px;
+    padding: 12px;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+
+.divider {
+    position: relative;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.divider::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 45%;
+    height: 1px;
+    background-color: #d1d3e2;
+}
+
+.divider::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 45%;
+    height: 1px;
+    background-color: #d1d3e2;
+}
+
+.footer {
+    text-align: center;
+    padding: 15px;
+    color: #858796;
+    font-size: 0.875rem;
+}
+
+.company-logo {
+    height: 60px;
+    margin-bottom: 15px;
+}
+
+.error-message {
+    color: #e74a3b;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+}
+
+.register-link a, .forgot-link a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.register-link a:hover, .forgot-link a:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+/* Animation */
+.login-container {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}

@@ -1,0 +1,125 @@
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color: #fff;
+}
+
+.receipt-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.receipt-header {
+    margin-bottom: 30px;
+}
+
+.company-logo {
+    height: 60px;
+}
+
+.receipt-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #4e73df;
+    margin-bottom: 10px;
+}
+
+.receipt-subtitle {
+    font-size: 18px;
+    color: #666;
+}
+
+.receipt-info {
+    margin-bottom: 20px;
+}
+
+.section-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #ddd;
+}
+
+.table-info th {
+    width: 40%;
+    text-align: left;
+    padding: 8px 10px;
+}
+
+.table-info td {
+    padding: 8px 10px;
+}
+
+.table-payment {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.table-payment th,
+.table-payment td {
+    padding: 8px 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.table-payment th {
+    background-color: #f8f9fa;
+}
+
+.receipt-footer {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+}
+
+.paid-stamp {
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    transform: rotate(-15deg);
+    font-size: 48px;
+    font-weight: bold;
+    color: rgba(76, 175, 80, 0.3);
+    border: 8px solid rgba(76, 175, 80, 0.3);
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-transform: uppercase;
+}
+
+.pending-stamp {
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    transform: rotate(-15deg);
+    font-size: 48px;
+    font-weight: bold;
+    color: rgba(255, 152, 0, 0.3);
+    border: 8px solid rgba(255, 152, 0, 0.3);
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-transform: uppercase;
+}
+
+@media print {
+    .no-print {
+        display: none !important;
+    }
+    
+    body {
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+    }
+    
+    .receipt-container {
+        width: 100%;
+        max-width: none;
+        padding: 0;
+        margin: 0;
+    }
+}
