@@ -29,20 +29,27 @@ Kushan Car Rent Web Application is a web-based car rental application designed t
 ## Project Structure
 ```
 CarRentApp.lk/
-├── admin/          # Admin panel files
-├── auth/           # Authentication system
-├── css/            # Stylesheets
-├── js/             # JavaScript files
-├── img/            # Images and assets
-├── includes/       # Reusable components (header, footer, etc.)
-├── database.sql    # SQL script for database setup
-├── index.html      # Home page
-├── about.html      # About page
-├── booking.html    # Booking interface
-├── car.html        # Car listings
-├── contact.html    # Contact page
-├── README.md       # Project documentation
-└── .gitignore      # Git ignore file
+├── auth/                     # Authentication system (login.php, logout.php, register.php)
+├── css/                      # Stylesheets
+├── js/                       # JavaScript files
+├── assets/images             # Images and assets
+├── includes/                 # Database_Connection.php
+├── database.sql              # SQL script for database setup
+├── index.php                 # Login Page
+├── booking_confirmation.php  # Booking Confirmation
+├── browse_cars.php           # Browse Cars
+├── cancel_booking.php        # Cancel Booking
+├── car_details.php           # Car Details
+├── dashboard.php             # Dashboard
+├── edit_review.php           # Edit Reviews
+├── make_payment.php          # Make Payment
+├── my_bookings.php           # My Bookings
+├── contact.php               # Contact page
+├── my_profile.php            # My Profile
+├── print_booking.php         # Print Bookings
+├── view_booking.php          # View Bookings
+├── README.md                 # Project documentation
+└── .gitignore                # Git ignore file
 ```
 
 ## Technologies Used
