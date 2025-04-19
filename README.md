@@ -5,7 +5,6 @@ Kushan Car Rent Web Application is a web-based car rental application designed t
 
 ## Features
 - User-friendly interface for browsing and booking cars
-- Admin panel for managing vehicle listings and bookings
 - Authentication system for secure user login
 - Responsive design for seamless mobile and desktop experience
 - Database integration for efficient data management
