@@ -63,3 +63,8 @@ Contributions are welcome! Feel free to submit a pull request or open an issue.
 ## License
 This project is licensed under the MIT License.
 
+##Author
+S.P.D.K.L Kumarasiri
+kushanlaksitha32@gmail.com
+asp2022113
+5883
