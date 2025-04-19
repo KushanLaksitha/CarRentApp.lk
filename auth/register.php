@@ -39,28 +39,31 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         try {
             // Check if username already exists
-            $stmt = $conn->prepare("SELECT user_id FROM users WHERE username = :username");
-            $stmt->bindParam(':username', $username);
+            $stmt = $conn->prepare("SELECT user_id FROM users WHERE username = ?");
+            $stmt->bind_param("s", $username);
             $stmt->execute();
+            $result = $stmt->get_result();
             
-            if ($stmt->rowCount() > 0) {
+            if ($result->num_rows > 0) {
                 $error = "Username already exists. Please choose a different one.";
             } else {
                 // Check if email already exists
-                $stmt = $conn->prepare("SELECT user_id FROM users WHERE email = :email");
-                $stmt->bindParam(':email', $email);
+                $stmt = $conn->prepare("SELECT user_id FROM users WHERE email = ?");
+                $stmt->bind_param("s", $email);
                 $stmt->execute();
+                $result = $stmt->get_result();
                 
-                if ($stmt->rowCount() > 0) {
+                if ($result->num_rows > 0) {
                     $error = "Email already registered. Please use a different email.";
                 } else {
                     // Check if NIC already exists (if provided)
                     if (!empty($nic_number)) {
-                        $stmt = $conn->prepare("SELECT user_id FROM users WHERE nic_number = :nic_number");
-                        $stmt->bindParam(':nic_number', $nic_number);
+                        $stmt = $conn->prepare("SELECT user_id FROM users WHERE nic_number = ?");
+                        $stmt->bind_param("s", $nic_number);
                         $stmt->execute();
+                        $result = $stmt->get_result();
                         
-                        if ($stmt->rowCount() > 0) {
+                        if ($result->num_rows > 0) {
                             $error = "NIC number already registered. Please contact support if you think this is an error.";
                         }
                     }
@@ -71,15 +74,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         $hashed_password = password_hash($password, PASSWORD_DEFAULT);
                         
                         // Insert user into database
-                        $stmt = $conn->prepare("INSERT INTO users (username, password, email, full_name, phone, address, nic_number, driving_license) VALUES (:username, :password, :email, :full_name, :phone, :address, :nic_number, :driving_license)");
-                        $stmt->bindParam(':username', $username);
-                        $stmt->bindParam(':password', $hashed_password);
-                        $stmt->bindParam(':email', $email);
-                        $stmt->bindParam(':full_name', $full_name);
-                        $stmt->bindParam(':phone', $phone);
-                        $stmt->bindParam(':address', $address);
-                        $stmt->bindParam(':nic_number', $nic_number);
-                        $stmt->bindParam(':driving_license', $driving_license);
+                        $stmt = $conn->prepare("INSERT INTO users (username, password, email, full_name, phone, address, nic_number, driving_license) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
+                        $stmt->bind_param("ssssssss", $username, $hashed_password, $email, $full_name, $phone, $address, $nic_number, $driving_license);
                         
                         if ($stmt->execute()) {
                             $success = "Registration successful! You can now login.";
@@ -90,12 +86,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             // Clear form data after successful registration
                             $username = $email = $full_name = $phone = $address = $nic_number = $driving_license = "";
                         } else {
-                            $error = "Registration failed. Please try again.";
+                            $error = "Registration failed. Please try again: " . $conn->error;
                         }
                     }
                 }
             }
-        } catch (PDOException $e) {
+        } catch (Exception $e) {
             $error = "An error occurred during registration. Please try again.";
             // For debugging: $error = "Error: " . $e->getMessage();
         }
@@ -123,7 +119,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         
         body {
             font-family: 'Nunito', 'Segoe UI', sans-serif;
-            background: linear-gradient(to right, rgba(78, 115, 223, 0.8), rgba(34, 74, 190, 0.9)), url('assets/images/car-bg.jpg');
+            background: linear-gradient(to right, rgba(78, 115, 223, 0.8), rgba(34, 74, 190, 0.9)), url('../assets/images/car-bg.jpg');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
